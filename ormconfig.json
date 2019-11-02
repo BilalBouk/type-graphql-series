@@ -5,7 +5,7 @@
   "port": 3306,
   "username": "mysql",
   "password": "mysql",
-  "database": "typegraphql-example",
+  "database": "typegraphql-example-dev",
   "synchronize": true,
   "logging": true,
   "entities": ["src/entity/*.*"]

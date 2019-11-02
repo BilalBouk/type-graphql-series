@@ -4,7 +4,6 @@ import cors from "cors";
 import Express from "express";
 import session from "express-session";
 import "reflect-metadata";
-import { formatArgumentValidationError } from "type-graphql";
 import { createConnection } from "typeorm";
 import { redis } from "./redis";
 import { createAuthorsLoader } from "./utils/authorsLoader";
@@ -17,7 +16,6 @@ const main = async () => {
 
   const apolloServer = new ApolloServer({
     schema,
-    formatError: formatArgumentValidationError,
     context: ({ req, res }: any) => ({
       req,
       res,

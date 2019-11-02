@@ -1,8 +1,8 @@
-import { Request, Response } from "express";
+import { Response } from "express";
 import { createAuthorsLoader } from "../utils/authorsLoader";
 
 export interface MyContext {
-  req: Request;
+  req: any;
   res: Response;
   authorsLoader: ReturnType<typeof createAuthorsLoader>;
 }
